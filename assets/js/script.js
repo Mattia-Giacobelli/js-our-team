@@ -56,9 +56,10 @@ const rowEl = document.querySelector('.row')
 
 //Stamp result in page
 //-Create a function to stamp a card for every member
-function stampMembers(row, members) {
-
+function cardMembers(members) {
+  
   //-Cycle inside the array
+  let row = ''
   for (let i = 0; i < members.length; i++) {
     const member = members[i];
 
@@ -76,15 +77,15 @@ function stampMembers(row, members) {
       </div>`
 
     //-Push the card structure into the rowEl
-    row.innerHTML += cardMarkup
+     row += cardMarkup
     
   }
+  
   return row
 }
 
 //-Stamp result in page
-const printCards = stampMembers(rowEl, teamMembers)
-
+rowEl.innerHTML = cardMembers(teamMembers)
 
 //Select formEl
 const formEl = document.querySelector('form')
@@ -99,13 +100,13 @@ console.log(formEl);
 //-Prevent default form behavior
 formEl.addEventListener('submit', function(e) { 
   e.preventDefault()
-
+  
   //-Get user input
   const name= nameEl.value
   const role = roleEl.value
   const email = emailEl.value
   const img = imgEl.value
-
+  
   teamMembers.push(
     {
       name,
@@ -115,6 +116,6 @@ formEl.addEventListener('submit', function(e) {
     }
   )
   console.log(teamMembers);
-  
+  rowEl.innerHTML = cardMembers(teamMembers)
 })
-//-Call stampMembers function
+//-Add the new
