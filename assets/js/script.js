@@ -53,11 +53,24 @@ Aggiungere un form di agginta membri che permetta di visualizzare il nuovo membr
 //Select rowEl
 const rowEl = document.querySelector('.row')
 
-//Create card HTML structure and save in a variable
-const cardMarkup = ''
 
 //Stamp result in page
 //-Create a function to stamp a card for every member
-//-Cycle inside the array our teams 
+function stampMembers(members) {
+  //-Create card HTML structure and save in a variable
+  const cardMarkup =
+    `<div class="col">
+      <div class="card">
+        <img class="card-img-top" src="./assets/img/" alt="">
+        <div class="card-body">
+          <h3></h3>
+          <div></div>
+        </div>
+      </div>
+    </div>`
+    
+    //-Cycle inside the array
+
+}
 //-Push the card structure into the rowEl
 //-Stamp result in page
