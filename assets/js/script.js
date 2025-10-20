@@ -87,7 +87,34 @@ const printCards = stampMembers(rowEl, teamMembers)
 
 
 //Select formEl
+const formEl = document.querySelector('form')
+const nameEl = document.getElementById('name')
+const roleEl = document.getElementById('role')
+const emailEl = document.getElementById('email')
+const imgEl = document.getElementById('img')
 
-//Add a new card based on fotm data
+console.log(formEl);
+
+//Add a new card based on form data
 //-Prevent default form behavior
+formEl.addEventListener('submit', function(e) { 
+  e.preventDefault()
+
+  //-Get user input
+  const name= nameEl.value
+  const role = roleEl.value
+  const email = emailEl.value
+  const img = imgEl.value
+
+  teamMembers.push(
+    {
+      name,
+      role,
+      email,
+      img
+    }
+  )
+  console.log(teamMembers);
+  
+})
 //-Call stampMembers function
