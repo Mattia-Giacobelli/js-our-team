@@ -84,3 +84,10 @@ function stampMembers(row, members) {
 
 //-Stamp result in page
 const printCards = stampMembers(rowEl, teamMembers)
+
+
+//Select formEl
+
+//Add a new card based on fotm data
+//-Prevent default form behavior
+//-Call stampMembers function
