@@ -64,7 +64,7 @@ function stampMembers(row, members) {
 
     //-Create card HTML structure and save in a variable
     const cardMarkup =
-      `<div class="col-4">
+      `<div class="col-lg-4 col-sm-6">
         <div class="card">
           <img class="card-img-top" src="./assets/${member.img}" alt="">
           <div class="card-body">
