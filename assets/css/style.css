@@ -1,0 +1,44 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Utility*/
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/*Main*/
+
+h1 {
+    color: #E53170;
+}
+
+/*Card*/
+.my-card {
+    color: white;
+    background-color: black;
+    margin-bottom: 1.5rem;
+
+    img {
+        height: 100px;
+    }
+
+    .member-info {
+        padding: 0 1rem;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+}

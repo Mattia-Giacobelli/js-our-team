@@ -66,12 +66,12 @@ function cardMembers(members) {
     //-Create card HTML structure and save in a variable
     const cardMarkup =
       `<div class="col-lg-4 col-sm-6">
-        <div class="card">
-          <img class="card-img-top" src="./assets/${member.img}" alt="">
-          <div class="card-body">
+        <div class="my-card d-flex">
+          <img src="./assets/${member.img}" alt="">
+          <div class="member-info">
             <h3>${member.name}</h3>
             <div>${member.role}</div>
-            <div>${member.email}</div>
+            <a href="">${member.email}</a>
           </div>
         </div>
       </div>`
